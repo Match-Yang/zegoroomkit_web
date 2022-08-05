@@ -1084,7 +1084,7 @@
     }
 
     async function attend(id, role, pid, beginTimestamp) {
-        const check = await checkBrowser()
+        const check = true;// await checkBrowser()
         if (check) {
             window.location.href =
                 `./demo.html?user=${userId}&room=${id}&name=${encodeURIComponent(userName)}&role=${role}&pid=${pid}&c=${cameraStatus ? 2 : 1}&m=${microphoneStatus ? 2 : 1}&beginTimestamp=${beginTimestamp}&enableHandwriting=${enableHandwriting}`;
